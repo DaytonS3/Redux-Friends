@@ -14,6 +14,9 @@ function Login() {
                 <input className="LoginInput" type="passWord"
                 placeholder="Password"/>
             </form>
+            <div>
+                <p className="LoginP">Forgot <span className="LoginSpan">Username / Password</span></p>
+            </div>
             <Link to="/home"><button className="LoginBtn">Login</button></Link>
         </div>
         

@@ -2,6 +2,11 @@
   text-align: center;
   font-family: 'Acme', sans-serif;
 }
+
+*:focus {
+  outline: none;
+}
+
 .login {
   width: 400px;
   background: white;
@@ -33,7 +38,7 @@
 }
 
 .LoginHeader {
-  background: lightcoral;
+  background: rgb(224, 95, 19);
   border-radius: 15px 15px 0 0;
   height: 75px;
 }
@@ -48,7 +53,19 @@
   height: 30px;
   border: none;
   border-radius: 15px;
-  background: lightcoral;
+  background: rgb(224, 95, 19);
   margin: 20px 0;
   font-family: 'Acme', sans-serif;
+  cursor: pointer;
+}
+.LoginP{
+  margin: 0;
+  font-size: 12px;
+  margin-left: 150px;
+  color: grey;
+}
+
+.LoginSpan {
+  color: rgb(224, 95, 19);
+  cursor: pointer;
 }

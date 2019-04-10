@@ -1,6 +1,6 @@
 
 const initialState = {
-    friend: ''
+    friends: []
 }
 
 const friends = (state = initialState, action) => {

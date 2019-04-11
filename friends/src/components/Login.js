@@ -1,7 +1,7 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {Friends} from './Action';
+import {withRouter} from 'react-router-dom';
 import '../App.css';
 
 class Login extends React.Component {
@@ -18,6 +18,8 @@ class Login extends React.Component {
     handleSubmit = e => {
         e.preventDefault();
         this.props.Friends(this.state.login)
+        .then(() => { this.props.history.push('/home');
+         })
         this.setState({
             login: {
                 username: '',
@@ -68,4 +70,4 @@ class Login extends React.Component {
 }
 
 
-export default connect(null, {Friends})(Login);
+export default withRouter( connect(null, {Friends})(Login));

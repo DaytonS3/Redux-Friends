@@ -8,8 +8,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Route exact path="/" component={Login} />
-        <Route path="/home" component={Home} />
+        <Route exact path="/" render={()=> <Login {...this.props}/>} />
+        <Route path="/home" render={()=> <Home />} />
       </div>
     );
   }

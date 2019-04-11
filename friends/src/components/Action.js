@@ -7,7 +7,8 @@ export function Friends(login) {
     console.log(login)
     return dispatch => {
         dispatch({type: FETCHING});
-        axios.post('http://localhost:5000/api/login', login)
+        return axios
+        .post('http://localhost:5000/api/login', login)
         .then(res => {
             localStorage.setItem('Token', res.data.payload)
             dispatch({
@@ -15,6 +16,7 @@ export function Friends(login) {
                 payload: res.data.payload
             })
         })
+        
         .catch(err => {
             console.log(err);
         })

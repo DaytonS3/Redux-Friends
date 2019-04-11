@@ -1,16 +1,23 @@
+import axios from 'axios';
+
 export const FETCHING = 'FETCHING';
 export const SUCCESS = 'SUCCESS';
-export const ERROR = 'ERROR';
 
-export function friends() {
+export function Friends(login) {
+    console.log(login)
     return dispatch => {
         dispatch({type: FETCHING});
-        axios.get('http://localhost:5000/api/friends')
+        axios.post('http://localhost:5000/api/login', login)
         .then(res => {
-            console.log(res);
+            localStorage.setItem('Token', res.data.payload)
+            dispatch({
+                type: SUCCESS,
+                payload: res.data.payload
+            })
         })
         .catch(err => {
             console.log(err);
         })
+        
     }
 } 

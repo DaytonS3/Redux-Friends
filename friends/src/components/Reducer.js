@@ -8,31 +8,20 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case FETCHING:
+       case FETCHING:
             return {
                 ...state,
-                fetching: true,
-                friends: [],
-                error: null
+                error: null,
+                fetching: true
             }
         case SUCCESS:
             return {
                 ...state,
+                error: null,
                 fetching: false,
-                friends: [],
-                error: null
+                friends: []
             }
-        case SUCCESS:
-            return {
-                ...state,
-                fetching: false,
-                friends: [],
-                error: 'ERROR'
-            }
-        default:
-            return state;
     }
-    
 }
 
-export default reducer
+export default reducer;

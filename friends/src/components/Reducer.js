@@ -1,15 +1,38 @@
+import { FETCHING, SUCCESS } from "./Action";
 
 const initialState = {
-    friends: []
+    friends: [],
+    fetching: false,
+    error: null
 }
 
-const friends = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
     switch (action.type) {
-
-    default:
-        return state;
+        case FETCHING:
+            return {
+                ...state,
+                fetching: true,
+                friends: [],
+                error: null
+            }
+        case SUCCESS:
+            return {
+                ...state,
+                fetching: false,
+                friends: [],
+                error: null
+            }
+        case SUCCESS:
+            return {
+                ...state,
+                fetching: false,
+                friends: [],
+                error: 'ERROR'
+            }
+        default:
+            return state;
     }
     
 }
 
-export default friends
+export default reducer

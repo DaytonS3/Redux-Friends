@@ -9,6 +9,7 @@ import thunk from 'redux-thunk';
 import {BrowserRouter as Router} from 'react-router-dom';
 
 
+
 const store = createStore(
     rootReducer,
     applyMiddleware(thunk)
@@ -16,7 +17,7 @@ const store = createStore(
 
 ReactDOM.render(
 <Router>
-<Provider store={store}>
+<Provider store={store} >
   <App />  
 </Provider>
 </Router>

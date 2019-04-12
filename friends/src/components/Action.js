@@ -2,6 +2,8 @@ import axios from 'axios';
 
 export const FETCHING = 'FETCHING';
 export const SUCCESS = 'SUCCESS';
+export const DATA_FETCHING = 'DATA_FETCHING';
+export const DATA_SUCCESS = 'DATA_SUCCESS';
 
 export function Friends(login) {
     console.log(login)
@@ -22,4 +24,8 @@ export function Friends(login) {
         })
         
     }
+} 
+
+export const getFriends = () => {
+
 } 

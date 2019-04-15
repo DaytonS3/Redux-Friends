@@ -1,0 +1,71 @@
+.App {
+  text-align: center;
+  font-family: 'Acme', sans-serif;
+}
+
+*:focus {
+  outline: none;
+}
+
+.login {
+  width: 400px;
+  background: white;
+  margin: 0 auto;
+  border-radius: 15px;
+  margin-top: 100px;
+  box-shadow: 20px 20px 50px grey;
+}
+
+.LoginForm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.LoginInput {
+  width: 75%;
+  margin: 10px 0;
+  height: 30px;
+  border-radius: 15px;
+  border: none;
+  text-align: center;
+  background: lightgray;
+  font-family: 'Acme', sans-serif;
+}
+
+::placeholder {
+  color: black;
+}
+
+.LoginHeader {
+  background: rgb(224, 95, 19);
+  border-radius: 15px 15px 0 0;
+  height: 75px;
+}
+
+.LoginHead {
+  color: white;
+  padding-top:20px;
+}
+
+.LoginBtn {
+  width: 75%;
+  height: 30px;
+  border: none;
+  border-radius: 15px;
+  background: rgb(224, 95, 19);
+  margin: 20px 0;
+  font-family: 'Acme', sans-serif;
+  cursor: pointer;
+}
+.LoginP{
+  margin: 0;
+  font-size: 12px;
+  margin-left: 150px;
+  color: grey;
+}
+
+.LoginSpan {
+  color: rgb(224, 95, 19);
+  cursor: pointer;
+}
